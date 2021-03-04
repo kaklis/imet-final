@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/navigation_graph"
+  app:startDestination="@id/peoplesListFragment">
+
+  <fragment
+    android:id="@+id/peoplesListFragment"
+    android:name="com.kaklis.android.isearchmovies.ui.list.MoviesListFragment"
+    android:label="iSearchMovies"
+    tools:layout="@layout/fragment_movies_list">
+    <action
+      android:id="@+id/action_peoplesListFragment_to_addPeopleFragment"
+      app:destination="@id/addMovieFragment" />
+    <action
+      android:id="@+id/action_moviesListFragment_to_movieDetailsFragment"
+      app:destination="@id/movieDetailsFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/addMovieFragment"
+    android:name="com.kaklis.android.isearchmovies.ui.add.AddMovieFragment"
+    android:label="Add Movie"
+    tools:layout="@layout/fragment_add_movie" />
+  <fragment
+    android:id="@+id/movieDetailsFragment"
+    android:name="com.kaklis.android.isearchmovies.ui.details.MovieDetailsFragment"
+    android:label="Movie Details"
+    tools:layout="@layout/fragment_movie_details" />
+</navigation>
